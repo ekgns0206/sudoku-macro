@@ -319,9 +319,9 @@ namespace Tools
             try
             {
                 var selectedItem = this._bindedSpriteListView.SelectedItems[0];
-                var sprite = selectedItem.Tag as Sprite.Template;
+                var sprite = selectedItem.Tag as Status.Element.Component;
 
-                this._bindedSpriteBox.Image = System.Drawing.Image.FromStream(new MemoryStream(sprite.Bytes));
+                this._bindedSpriteBox.Image = System.Drawing.Image.FromStream(new MemoryStream(sprite.template.Bytes));
             }
             catch (Exception)
             { }
